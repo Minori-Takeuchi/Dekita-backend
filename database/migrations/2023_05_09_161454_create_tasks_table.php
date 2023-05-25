@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('child_id')->constrained()->cascadeOnDelete();
             $table->foreignId('timezone_id')->constrained()->cascadeOnDelete();
-            $table->string('task_name')->nullable(false);
-            $table->date('date')->nullable(false);
-            $table->time('time')->nullable(false);
+            $table->string('task_name')->nullable();
+            $table->date('date')->nullable();
+            $table->time('time')->nullable();
             $table->timestamps();
         });
     }

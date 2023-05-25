@@ -14,8 +14,8 @@ class UsersTableSeeder extends Seeder
     public function run(): void
     {
         $param = [
-            'id' => 'cZZ0CxyjXBaNa72p47o6luKO8uM2',
-            'email' => 'shato.min0716@gmail.com',
+            'id' => 'nDgH6Woe7feqMDqYun2qzYolLNF3',
+            'email' => 'gest@gest.com',
             'notice' => 0
         ];
         User::create($param);

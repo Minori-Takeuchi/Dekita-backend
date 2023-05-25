@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('child_name')->nullable(false);
             $table->tinyInteger('generation')->nullable(false)->comment('0:幼児,1:小学生');
             $table->bigInteger('point')->default(0)->nullable(false);
-            $table->string('child_img')->nullable(false);
+            $table->string('child_img')->nullable()->default('NoImage.jpg');
             $table->timestamps();
         });
     }

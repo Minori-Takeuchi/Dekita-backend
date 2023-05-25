@@ -22,7 +22,7 @@ class UserController extends Controller
             ],200);
         } else {
             return response()->json([
-                'massage' => 'Not found'
+                'message' => 'Not found'
             ], 404);
         };
     }
@@ -44,7 +44,9 @@ class UserController extends Controller
 
     public function update(SignupRequest $request)
     {
-        $user = User::where('id ',$request->id)->update($request);
+        $user = User::where('id',$request->id)->update([
+            'notice' => $request->notice
+        ]);
         if($user) {
             return response()->json([
                 'message' => 'updated successfully'
